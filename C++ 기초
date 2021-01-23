@@ -1,0 +1,82 @@
+# 2021_DA_in_CPP
+2021년 자료구조 근본찾기 프로젝트
+
+----
+NULL의 사용
+<cstdlib> : 이 라이브러리를 include 해야만 쓸 수 있다.
+  
+ASCII 코드 값 0인 상수이다.
+
+----
+자료형의 크기
+
+모든 자료형의 용량은 sizeof(obj)를 쉘? 에 실행시켜봄으로써 확인할 수 있다.
+
+----
+
+enum 자료형:
+
+enum Day = {SUN, MON, TUE ... SAT} : 선언
+
+0.enum 으로 하여금 Day 라는 형태의 자료형을 사용자가 하나 정의한 셈이다.
+
+1. 모든 형태의 enum 객체들은 초기에 정의된 집합 안의 한정적인 값들만 가질 수 있다.
+2. 이들 객체들은 하나의 정수처럼 동작한다. 기본적으로 0부터 step = 1, 인덱스 순서대로, 값이 주어진다.
+3. 하지만, 초기에 enum Day = {SUN = 7, ... }과 같이 정의하여 값을 직접 지정해 줄 수 있다.
+
+---
+
+포인터와 구조체
+
+struct Dude
+{
+  string name;
+  unsigned int age;
+}
+
+
+
+Dude* P = new Dude;
+ㄴ> P는 Dude 구조체 Kim 의 주소를 지니고 있다.
+
+Dude.name
+(*P).name  //이것이 본래 구조체의 멤버에 접근하는 방식이다. 허나 P를 사용하면..
+
+P->name //포인터를 사용한 멤버 접근은 이렇게 해야 한다.
+
+delete P 로 동적할당을 해제하는 것을 잊지 말자.
+
+---
+형변환
+
+C 스타일:
+int alpha = 5;
+double Beta = (double)alpha;
+
+C++스타일:
+int alpha=5;
+double Beta = double(alpha);
+ㄴ>python 의 ''.join(list) & list(string)가 생각나는 부분이다. 함수형 형변환이라고도 한다.
+
+---
+제어문
+
+switch(trigger)
+  case1:
+  
+  case2:
+  ...
+
+위와 같이 동작하는 조건문. trigger 는 enum 변수도 될 수 있다.
+
+---
+
+
+
+
+
+
+
+
+
+
