@@ -1,0 +1,35 @@
+# 2021_DA_in_CPP
+2021년 자료구조 근본찾기 프로젝트
+
+List와 Position
+
+container 는, 일반적인 객체들을 모두 담을 수 있는 자료구조들이다
+
+지금까지 배운 모든 ADT들이 C++에서는 모두 container 에 해당된다. (템플릿 T를 사용하기 때문??)
+
+
+그리고, 이 list 라는 자료구조는 index 보다 직관적인 position 을 사용한다.
+ㄴ>이 position 은 다소 추상적인 개념이다.
+ㄴ>이 position C계열 언어에서는 포인터로 구현되어 있다고 할 수 있겠다.
+
+
+
+가령, position 들이 순서대로 쭉 정렬되어 있으면 배열과 같고,
+
+position 들이 전후관계로 연결되어 있으면 그것은 링크드 리스트와 같다. 그런 식이다.
+
+
+
+
+iterator 역시 position 이라는 추상적인 개념을 구체적으로 구현한 예시이다.
+
+
+====================
+double linked list
+
+single 에서 각 node 들이 일방통행식으로 연결되어 있었다면, double 은 양방향으로 연결되어 있다.
+
+position 이 method 의 parameter 로 주어진다면, 탐색 과정이 필요 없으므로 수행시간은 O(n)이다.
+
+
+
