@@ -1,0 +1,71 @@
+# 2021_DA_in_CPP
+2021년 자료구조 근본찾기 프로젝트
+
+그래프 자료구조에 대한 기초적인 내용.
+
+
+V(G) : 그래프의 Element 들을 단순하게 나열한 것.
+
+E(G) : Graph 의 Edge 를 말한다. 이때 Edge 는 그래프의 모든 연결관계를 말하는 것이다.
+ㄴ>소괄호 (e1, e2) 는 양방향 연결관계를 말한다.
+ㄴ>중괄호 <e1, e2> 는 e1 -> e2 로 가는 단방향 연결관계를 말한다.
+
+1. 스스로에서 스스로로 가는 연결은 단방향이든 양방향이든 허락되지 않는다.
+2. 같은 연결이 여러번 정의될 수는 없다.
+ㄴ> 허나, e1 과 e2 사이의, 서로 반대 방향의 단방향 연결이 2개 존재할 수는 있다.
+
+
+- Complete Graph 
+
+ㄴ> n 개의 원소가 존재한다.
+ㄴ> 가능한 모든 Edge 가 연결되어 있다.
+ㄴ> 다만 이때, Directed / Undirected 에 따라 연결의 개수가 n(n-1) 또는 n(n-1)/2 로 나뉜다.
+
+
+
+- Adjecent : 인접해 있다. 둘 사이에 Edge 가 존재하면 Adjecent 하다고 판정한다.
+- incedent : 포함한다. Edge 는 두개의 정점을 포함한다.
+
+- Subgraph : Graph G1 이 지니고 있는 모든 Edge 와 Vertices 를 Graph G2 가 지니고 있다면, G1 은 G2 의 Subgraph 이다.
+
+
+Path
+
+- Edge 를 따라서 Vertices 를 순회하는 작업을 의미한다.
+- 단방향 Edge 를 지나고자 할땐 반드시 방향이 맞아야 한다. 양방향은 무조건 오케이.
+- Cycle : 시점과 종점이 같은 Path
+- Simple Path : 시점과 종점이 다른 Path
+- Directed : 방향성을 지니고 있는 Path 를 의미한다.
+
+
+연결성
+
+- Connected : 만약 Undirected Graph 에서 모든 점 사이에 둘 사이의 경로가 존재한다면 그래프가 연결되어 있다고 한다.
+- Strongly Connected :  만약 Directed Graph 에서 모든 점 사이에 단방향 Path 가 존재한다면 그래프가 연결되어 있다고 한다.
+ㄴ> 만약 점 하나만 덩그러니 존재하는 Graph 라면 그것 역시 연결되어 있는 것으로 친다
+
+
+- Degree : 어떤 점이 가지고 있는 연결의 개수
+- in-Degree : Directed Graph 에서, 어떤 점 v 가 시작점이 되는 Edge 의 개수
+- out-Degree : 반대로 점 v 가 꼬리가 되는 Edge 의 개수
+
+
+Tree : 말하자면 단방향, 비순환성 그래프라고 하겠다.
+ㄴ> 영어로 Acyclic Connected Graph 라고 부른다
+
+
+Adjacency Matrix : 연결 매트릭스. 그래프의 연결 상태를 정의한다.
+ㄴ>각 연결 adjact[i][j] 는 정점 i 에서 정점 j 로 가는 Edge 의 존재 여부를 나타낸다.
+
+Adjacency list : 각 정점들은 리스트를 하나씩 지닌다.
+ㄴ>각 노드들은 정점을 나타내는 int 하나를 데이터로 지닌다.
+ㄴ>이러한 노드포인터의 배열이 곧 Graph 가 된다.
+ㄴ>그리고 이것의 배열 순서는 관계가 없다.
+
+Edge Structure : Edge 하나를, 멤버 변수 int 두개 v1, v2 를 가지도록 하여 나타낸다.
+
+
+
+
+
+
