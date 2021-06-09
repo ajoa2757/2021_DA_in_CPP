@@ -198,11 +198,47 @@ S : S 는 v0 로부터 Shortest Path 가 찾아진 격자들의 집합이다.
 
  
  
+ AOV : activity on vertex Network
+ 
+ㄴ> 유향 그래프를 사용하여 나타낸 어떤 네트워크이다.
+ㄴ> 가령, 각 격자들이 대학교의 강의들이라고 해 보자.
+ㄴ> 유향 그래프를 사용한 관계로, 각각이 선수과목으로써 연결된 다양한 강의들의 모습을 하고 있을 수 있다.
+
+- predecessor : i 가 선수과목, j 가 그 이후 수강 과목 이라고 하자. 
+ㄴ> i 는 j 의 predecessor 이다.
+ㄴ> j 는 i 의 successor 이다.
+ㄴ> 이때 둘이 한 Edge 로 직접 연결되어 있다면, 둘을 immediate Prede/successor 라고 한다\
+
+- Transitive : 둘이 어쩄든 연결되어 있는 상황
+- irreflexible : 
+
+....
+
+Topological order : 모든 격자를 Linear 하게 늘어놓은 것.
+- Predecessor 들의 순서가 무조건 Successor 보다 앞선다.
+
+- 격자 하나를 Pop 하고, 그 Successor 들 중에서 Predecessor 가 하나도 남지 않은 격자부터 또다시 POP 하는 식.
+- 격자들은 연결 리스트 형태로 Edge 들을 기술하고 있다고 전제한다.
+
+ ㄴ> 반복문을 통해 Predecessor 가 없는 최초의 조상 노드를 찾을 필요가 있다.
+ ㄴ> top 을 출력하고, 반복문을 통해 새로운 top 을 찾는 것을 기본 골자로 한다.
  
  
+AOE : 위의 AOV 에서, 이번엔 Task 의 추상적 역할을 Edge 가 도맡아 한다. 그래프의 기본 구조는 유항-가중그래프이다.
 
+ㄴ> 각 격자들은 특정 task(=Edge) 가 완료된 어떤 상태를 의미하게 된다.
+ㄴ> 가중치가 0 인 Edge 는 dummy activities 라고 부른다.
 
+critical path : Shortest Path 와 같은 맥락이다.
+ㄴ> 단 이때는, 프로젝트 시작과 끝 node 가 정해져 있으므로 그 둘의 경로라고 하겠다.
 
+ 
+ late(i) : 어떤 상태 vi 에 도달하기 위한 가장 늦은 시간.
+ early(i) : 어떤 상태 vi 에 도달하기 위한 가장 빠른 시간.
+ 
+ Critical Activity : 위의 두 함수가 서로 같은 격자 i 
+ 
+ 
 
 
 
